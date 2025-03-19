@@ -1,5 +1,5 @@
-const { contextBridge, ipcRenderer } = require("electron");
+const { contextBridge, ipcRenderer } = require('electron');
 
-contextBridge.exposeInMainWorld("electronAPI", {
-    loadURL: (url) => ipcRenderer.send("load-url", url)
+contextBridge.exposeInMainWorld('electron', {
+  loadURL: (url) => ipcRenderer.send('load-url', url)
 });
